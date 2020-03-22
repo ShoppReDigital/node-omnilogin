@@ -1,10 +1,11 @@
 {
   "name": "@shoppre/omnilogin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "OmniLogin Client SDK for Javascript/Nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm publish --access public"
   },
   "repository": {
     "type": "git",
