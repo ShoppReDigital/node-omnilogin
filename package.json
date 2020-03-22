@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/shoppre/node-omnilogin/issues"
   },
-  "homepage": "https://github.com/shoppre/node-omnilogin#readme"
+  "homepage": "https://github.com/shoppre/node-omnilogin#readme",
+  "dependencies": {
+    "@shoppre/oauth2-server": "^2.4.4",
+    "debug": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
 }
