@@ -1,0 +1,24 @@
+{
+  "name": "@shoppre/omnilogin",
+  "version": "0.0.1",
+  "description": "OmniLogin Client SDK for Javascript/Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoppre/node-omnilogin.git"
+  },
+  "keywords": [
+    "OmniLogin",
+    "OAuth",
+    "2.0"
+  ],
+  "author": "Punith H S <punith@shoppre.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shoppre/node-omnilogin/issues"
+  },
+  "homepage": "https://github.com/shoppre/node-omnilogin#readme"
+}
