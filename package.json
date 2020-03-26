@@ -1,6 +1,6 @@
 {
   "name": "@shoppre/omnilogin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "OmniLogin Client SDK for Javascript/Nodejs",
   "main": "index.js",
   "scripts": {

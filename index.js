@@ -2,8 +2,14 @@ const debug = require('debug');
 const rp = require('request-promise');
 
 const authenticate = require('./oauth/authenticate');
+const oAuth = require('./oauth');
+const service = require('./oauth/oauth.service');
 
 const log = debug('omnilogin/index');
+console.log('callback', process.env.OMNILOGIN_URL);
+
+exports.oAuth = oAuth;
+exports.authenticate = authenticate;
 
 exports.callback = ({ client_id, client_secret, redirect_uri }) => async (req, res, next) => {
     try {
@@ -21,9 +27,7 @@ exports.callback = ({ client_id, client_secret, redirect_uri }) => async (req, r
             json: true,
         });
 
-        const user = await rp({
-            uri: `${process.env.OMNILOGIN_URL}/api/users/me?access_token=${response.access_token}`
-        });
+        const user = await service.getUserFromToken(response.access_token)
 
         return { tokens: response, user };
         // - ... Signup: you can update user details in you crm database
@@ -33,4 +37,3 @@ exports.callback = ({ client_id, client_secret, redirect_uri }) => async (req, r
     }
 };
 
-exports.authenticate = authenticate;
