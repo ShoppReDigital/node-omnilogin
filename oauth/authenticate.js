@@ -15,6 +15,7 @@ const _next = (req, res, next) => {
           .json(req.oauth.bearerToken)
     }
     log('Intercepting next', { err, u: req.user });
+    if (err) return next(err);
     next();
   }
 };
